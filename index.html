@@ -129,8 +129,9 @@
 
         .cta-buttons {
             display: flex;
-            gap: 15px;
+            gap: 16px;              /* puoi lasciare 15 se ti piace di più */
             justify-content: center;
+            align-items: center;    /* allinea verticalmente */
             flex-wrap: wrap;
         }
 
@@ -142,7 +143,9 @@
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
+            justify-content: center;   /* centra contenuto interno */
             gap: 8px;
+            min-width: 190px;          /* STESSA LARGHEZZA per entrambi */
         }
 
         .btn-primary {
@@ -420,7 +423,7 @@
         <h2 class="section-title">Chi Sono</h2>
         <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8;">
             <p>
-             Studente al 3° anno di Ingegneria Meccanica del Veicolo presso UNIMORE, diplomato con 100/100 come perito meccano-plastico presso ITS Luigi Einaudi. Attualmente docente STEM in Sistemi e Automazioni Industriali presso lo stesso ITS, con esperienza consolidata in progettazione CAD (Solidworks), robotica industriale (patentino COMAU) e gestione di progetti tecnici. Rappresentante d'Istituto per 2 anni e project leader del team vincitore della First Lego League Italia a livello interregionale. Volontario Croce Rossa Italiana. Inoltre, sono socio Lions Club International, realtà in cui coltivo leadership etica, servizio alla comunità e collaborazione in contesti associativi strutturati.
+                Studente al 3° anno di Ingegneria Meccanica del Veicolo presso UNIMORE, diplomato con 100/100 come perito meccano-plastico presso ITS Luigi Einaudi. Attualmente docente STEM in Sistemi e Automazioni Industriali presso lo stesso ITS, con esperienza consolidata in progettazione CAD (Solidworks), robotica industriale (patentino COMAU) e gestione di progetti tecnici. Rappresentante d'Istituto per 2 anni e project leader del team vincitore della First Lego League Italia a livello interregionale. Volontario Croce Rossa Italiana e socio Lions Club International, dove coltivo leadership etica, servizio alla comunità e collaborazione in contesti associativi strutturati.
             </p>
         </div>
     </section>
@@ -577,25 +580,28 @@
         <h2 class="section-title">Esperienze Lavorative e Formative</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <h3>Docente STEM - Sistemi e Automazioni Industriali</h3>
-                <p class="timeline-date">
-                    Ottobre 2024 - Luglio 2025<br>
-                    Ottobre 2025 - Presente
-                </p>
-                <p>ITS Luigi Einaudi, Correggio (RE). Contratto part-time 9 ore settimanali per le classi 3°, 4° e 5° meccanici, con gestione autonoma di lezioni, verifiche e coordinamento con il consiglio di classe. Esperienza continuativa su due anni scolastici consecutivi (2024/25 e 2025/26).</p>
-                <div style="margin-top: 20px; margin-left: 25px; padding-left: 15px; border-left: 3px solid var(--color-primary);">
-                    <p style="margin-bottom: 12px;"><strong>📋 Commissario Interno Esame di Stato 2025 - Meccanica</strong><br>
-                    Membro della commissione d'esame per la Maturità 2025 (classe 5amp), con responsabilità nella valutazione delle prove scritte e orali di Meccanica e partecipazione alle decisioni collegiali sui voti finali.</p>
-                    <p style="margin-bottom: 12px;"><strong>💻 Docente Corsi Pomeridiani Solidworks 3D (40 ore)</strong><br>
-                    Conduzione di 2 corsi extra-curriculari di Solidworks 3D per studenti 3amp, 4amp e 5amp, focalizzati su modellazione di componenti, assiemi e tavole tecniche orientate al mondo produttivo.</p>
-                    <p style="margin-bottom: 12px;"><strong>⚛️ Docente Corsi di Recupero Fisica (10 ore)</strong><br>
-                    Supporto mirato a studenti degli indirizzi meccanico e informatico su cinematica, dinamica e statica, con esercizi guidati e metodo di studio pratico per colmare le principali lacune.</p>
-                    <p style="margin-bottom: 12px;"><strong>🤖 Tutor Progetto First Lego League Italia 2026 (30 ore)</strong><br>
-                    Tutoraggio del team studenti per la FLL Italia 2026: programmazione robot Lego Mindstorms, definizione strategie di gara e preparazione della presentazione del progetto scientifico.</p>
-                    <p style="margin-bottom: 0px;"><strong>🧭 Tutor Orientamento in Entrata</strong><br>
-                    Coinvolgimento nelle attività di orientamento per studenti di terza media e famiglie, con conduzione di laboratori pomeridiani nei locali tecnici dell’istituto e presentazioni durante gli Open Day. Spiegazione del corso meccatronico, dei progetti svolti e degli sbocchi futuri, accompagnando i visitatori in un tour guidato della scuola e adattando il linguaggio tecnico a pubblici non specialisti.</p>
-                </div>
+            <h3>Docente STEM - Sistemi e Automazioni Industriali</h3>
+            <p class="timeline-date">
+                Ottobre 2024 - Luglio 2025<br>
+                Ottobre 2025 - Presente
+            </p>
+            <p>
+                ITS Luigi Einaudi, Correggio (RE). Contratto part-time 9 ore settimanali per le classi 3°, 4° e 5° meccanici, con gestione autonoma di lezioni, verifiche e coordinamento con il consiglio di classe. Esperienza continuativa su due anni scolastici consecutivi (2024/25 e 2025/26).
+            </p>
+            <div style="margin-top: 20px; margin-left: 25px; padding-left: 15px; border-left: 3px solid var(--color-primary);">
+            <p style="margin-bottom: 10px;"><strong>Attività principali:</strong></p>
+            <p style="margin-bottom: 12px;"><strong>📋 Commissario Interno Esame di Stato 2025 - Meccanica</strong><br>
+                Membro della commissione d'esame per la Maturità 2025 (classe 5amp), con responsabilità nella valutazione delle prove scritte e orali di Meccanica e partecipazione alle decisioni collegiali sui voti finali.</p>
+            <p style="margin-bottom: 12px;"><strong>💻 Docente Corsi Pomeridiani Solidworks 3D (40 ore)</strong><br>
+                Conduzione di 2 corsi extra-curriculari di Solidworks 3D per studenti 3amp, 4amp e 5amp, focalizzati su modellazione di componenti, assiemi e tavole tecniche orientate al mondo produttivo.</p>
+            <p style="margin-bottom: 12px;"><strong>⚛️ Docente Corsi di Recupero Fisica (10 ore)</strong><br>
+                Supporto mirato a studenti degli indirizzi meccanico e informatico su cinematica, dinamica e statica, con esercizi guidati e metodo di studio pratico per colmare le principali lacune.</p>
+            <p style="margin-bottom: 12px;"><strong>🤖 Tutor Progetto First Lego League Italia 2026 (30 ore)</strong><br>
+                Tutoraggio del team studenti per la FLL Italia 2026: programmazione robot Lego Mindstorms, definizione strategie di gara e preparazione della presentazione del progetto scientifico.</p>
+            <p style="margin-bottom: 0;"><strong>🧭 Tutor Orientamento in Entrata</strong><br>
+                Coinvolgimento nelle attività di orientamento per studenti di terza media e famiglie, con conduzione di laboratori pomeridiani nei locali tecnici dell’istituto e presentazioni durante gli Open Day. Spiegazione del corso meccatronico, dei progetti svolti e degli sbocchi futuri, accompagnando i visitatori in un tour guidato della scuola e adattando il linguaggio tecnico a pubblici non specialisti.</p>
             </div>
+        </div>
             <div class="timeline-item">
                 <h3>Socio Lions Club International</h3>
                 <p class="timeline-date">2025 - Presente</p>
