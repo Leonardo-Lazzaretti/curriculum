@@ -80,12 +80,18 @@
             max-width: 800px;
         }
 
-        .profile-img {
+        .profile-wrapper {
+            position: relative;
             width: 190px;
             height: 190px;
+            margin: 0 auto 30px;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             border: 5px solid rgba(255, 255, 255, 0.3);
-            margin: 0 auto 30px;
             background: rgba(255, 255, 255, 0.1);
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             overflow: hidden;
@@ -98,6 +104,13 @@
             width: 110%;
             height: 110%;
             object-fit: cover;
+        }
+
+        .lions-badge {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            height: 50px;
         }
 
         .hero h1 {
@@ -383,8 +396,11 @@
 <body>
     <section class="hero">
         <div class="hero-content">
-            <div class="profile-img">
-                <img src="img profilo leonardo.jpg" alt="Leonardo Lazzaretti">
+            <div class="profile-wrapper">
+                <div class="profile-img">
+                    <img src="img profilo leonardo.jpg" alt="Leonardo Lazzaretti">
+                </div>
+            <img src="lions-logo.png" alt="Lions Clubs International" class="lions-badge">
             </div>
             <h1>Leonardo Lazzaretti</h1>
             <p class="subtitle">Studente Ingegneria Meccanica del Veicolo | Perito Meccano-plastico | Docente STEM</p>
@@ -403,10 +419,9 @@
     <section class="section" id="about">
         <h2 class="section-title">Chi Sono</h2>
         <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8;">
-            <p>Studente al 3° anno di Ingegneria Meccanica del Veicolo presso UNIMORE, diplomato con 100/100 come perito meccano-plastico presso ITS Luigi Einaudi. 
-            Attualmente docente STEM in Sistemi e Automazioni Industriali presso lo stesso ITS, con esperienza consolidata in progettazione CAD (Solidworks), 
-            robotica industriale (patentino COMAU) e gestione di progetti tecnici. Rappresentante d'Istituto per 2 anni e project leader del team vincitore 
-            della First Lego League Italia a livello interregionale. Volontario Croce Rossa Italiana.</p>
+            <p>
+             Studente al 3° anno di Ingegneria Meccanica del Veicolo presso UNIMORE, diplomato con 100/100 come perito meccano-plastico presso ITS Luigi Einaudi. Attualmente docente STEM in Sistemi e Automazioni Industriali presso lo stesso ITS, con esperienza consolidata in progettazione CAD (Solidworks), robotica industriale (patentino COMAU) e gestione di progetti tecnici. Rappresentante d'Istituto per 2 anni e project leader del team vincitore della First Lego League Italia a livello interregionale. Volontario Croce Rossa Italiana. Inoltre, sono socio Lions Club International, realtà in cui coltivo leadership etica, servizio alla comunità e collaborazione in contesti associativi strutturati.
+            </p>
         </div>
     </section>
 
@@ -431,12 +446,12 @@
             <div class="skill-card">
                 <div class="skill-icon">❤️</div>
                 <h3>Empatia</h3>
-                <p>Rafforzata tramite volontariato in Croce Rossa Italiana, docenza con studenti di diverse età e background, e attività di tutoraggio personalizzato.</p>
+                <p>Rafforzata tramite volontariato in Croce Rossa Italiana e partecipazione attiva al Lions Club International, con attenzione all’ascolto delle persone, al servizio alla comunità e al rispetto di contesti e sensibilità diversi.</p>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">⏱️</div>
                 <h3>Gestione Scadenze</h3>
-                <p>Capacità di rispettare tempistiche anche con più attività parallele: studio universitario, docenza 9h/settimana, progetti extra-curriculari e volontariato.</p>
+                <p>Capacità di rispettare tempistiche anche con più attività parallele: studio universitario, docenza STEM, progetti extra-curriculari e volontariato.</p>
             </div>
             <div class="skill-card">
                 <div class="skill-icon">🔄</div>
@@ -508,16 +523,16 @@
                 </div>
             </div>
             <div class="project-card">
-                <div class="project-img">📐</div>
-                <div class="project-content">
-                    <h3>Progettazione Supporto Rullo</h3>
-                    <p>Progetto scolastico completo: studio requisiti funzionali, modellazione 3D in Solidworks, rispetto di specifiche di carico e geometria, documentazione tecnica dettagliata.</p>
-                    <div class="project-tags">
-                        <span class="tag">Solidworks 3D</span>
-                        <span class="tag">Progettazione</span>
-                        <span class="tag">Documentazione</span>
-                    </div>
-                </div>
+               <div class="project-img">📜</div>
+               <div class="project-content">
+                   <h3>Certificazione Robotica Industriale COMAU</h3>
+                   <p>Percorso certificato di uso e programmazione robot industriali COMAU, con esercitazioni pratiche su robot reali: movimentazione assi, traiettorie, logica di programma e sicurezza in cella.</p>
+                   <div class="project-tags">
+                        <span class="tag">Robotica</span>
+                        <span class="tag">Automazione</span>
+                        <span class="tag">Certificazione</span>
+                   </div>
+              </div>
             </div>
             <div class="project-card">
                 <div class="project-img">🎓</div>
@@ -543,6 +558,18 @@
                     </div>
                 </div>
             </div>
+            <div class="project-card">
+                <div class="project-img">📐</div>
+                <div class="project-content">
+                    <h3>Progettazione Supporto Rullo</h3>
+                    <p>Progetto scolastico completo: studio requisiti funzionali, modellazione 3D in Solidworks, rispetto di specifiche di carico e geometria, documentazione tecnica dettagliata.</p>
+                    <div class="project-tags">
+                        <span class="tag">Solidworks 3D</span>
+                        <span class="tag">Progettazione</span>
+                        <span class="tag">Documentazione</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -551,18 +578,28 @@
         <div class="timeline">
             <div class="timeline-item">
                 <h3>Docente STEM - Sistemi e Automazioni Industriali</h3>
-                <p class="timeline-date">Ottobre 2024 - Presente (anno 2025/2026 in corso)</p>
-                <p>ITS Luigi Einaudi, Correggio (RE). Contratto part-time 9 ore settimanali per le classi 3°, 4° e 5° meccanici, con gestione autonoma di lezioni, verifiche e coordinamento con il consiglio di classe.</p>
+                <p class="timeline-date">
+                    Ottobre 2024 - Luglio 2025<br>
+                    Ottobre 2025 - Presente
+                </p>
+                <p>ITS Luigi Einaudi, Correggio (RE). Contratto part-time 9 ore settimanali per le classi 3°, 4° e 5° meccanici, con gestione autonoma di lezioni, verifiche e coordinamento con il consiglio di classe. Esperienza continuativa su due anni scolastici consecutivi (2024/25 e 2025/26).</p>
                 <div style="margin-top: 20px; margin-left: 25px; padding-left: 15px; border-left: 3px solid var(--color-primary);">
                     <p style="margin-bottom: 12px;"><strong>📋 Commissario Interno Esame di Stato 2025 - Meccanica</strong><br>
                     Membro della commissione d'esame per la Maturità 2025 (classe 5amp), con responsabilità nella valutazione delle prove scritte e orali di Meccanica e partecipazione alle decisioni collegiali sui voti finali.</p>
                     <p style="margin-bottom: 12px;"><strong>💻 Docente Corsi Pomeridiani Solidworks 3D (40 ore)</strong><br>
                     Conduzione di 2 corsi extra-curriculari di Solidworks 3D per studenti 3amp, 4amp e 5amp, focalizzati su modellazione di componenti, assiemi e tavole tecniche orientate al mondo produttivo.</p>
-                    <p style="margin-bottom: 12px;"><strong>⚗️ Docente Corsi di Recupero Fisica (10 ore)</strong><br>
+                    <p style="margin-bottom: 12px;"><strong>⚛️ Docente Corsi di Recupero Fisica (10 ore)</strong><br>
                     Supporto mirato a studenti degli indirizzi meccanico e informatico su cinematica, dinamica e statica, con esercizi guidati e metodo di studio pratico per colmare le principali lacune.</p>
-                    <p style="margin-bottom: 0;"><strong>🤖 Tutor Progetto First Lego League Italia 2026 (30 ore)</strong><br>
+                    <p style="margin-bottom: 12px;"><strong>🤖 Tutor Progetto First Lego League Italia 2026 (30 ore)</strong><br>
                     Tutoraggio del team studenti per la FLL Italia 2026: programmazione robot Lego Mindstorms, definizione strategie di gara e preparazione della presentazione del progetto scientifico.</p>
+                    <p style="margin-bottom: 0px;"><strong>🧭 Tutor Orientamento in Entrata</strong><br>
+                    Coinvolgimento nelle attività di orientamento per studenti di terza media e famiglie, con conduzione di laboratori pomeridiani nei locali tecnici dell’istituto e presentazioni durante gli Open Day. Spiegazione del corso meccatronico, dei progetti svolti e degli sbocchi futuri, accompagnando i visitatori in un tour guidato della scuola e adattando il linguaggio tecnico a pubblici non specialisti.</p>
                 </div>
+            </div>
+            <div class="timeline-item">
+                <h3>Socio Lions Club International</h3>
+                <p class="timeline-date">2025 - Presente</p>
+                <p>Partecipazione attiva a iniziative di servizio alla comunità, progetti sociali e raccolte fondi in ambito Lions. Esperienza che rafforza valori di leadership etica, responsabilità verso il territorio e collaborazione con professionisti di età e background differenti.</p>
             </div>
             <div class="timeline-item">
                 <h3>Studente Ingegneria Meccanica del Veicolo</h3>
@@ -570,19 +607,27 @@
                 <p>UNIMORE, sede Modena. Percorso focalizzato su progettazione, meccanica applicata e modellazione CAD, con esame di Modellazione CAD superato e solide basi teorico-pratiche per la progettazione meccanica.</p>
             </div>
             <div class="timeline-item">
+                <h3>Certificazione Robotica Industriale COMAU</h3>
+                <p class="timeline-date">2022</p>
+                <p>Corso intensivo di uso e programmazione robot industriali COMAU presso ITS Luigi Einaudi. Attività svolta su robot reali con esercizi di movimentazione, gestione traiettorie, logica di programmazione e sicurezza in cella robotizzata. Certificazione conseguita a fine percorso con prova pratica e teorica.</p>
+            </div>
+            <div class="timeline-item">
                 <h3>PCTO - Controllo Qualità e Produzione Plastica</h3>
-                <p class="timeline-date">Giugno 2021 (3 settimane)</p>
+                <p class="timeline-date">2021</p>
                 <p>Nevicolor Srl (RE). Attività in reparto produttivo: controllo qualità su granuli plastici da estrusione (prove densità, colore, difettologia visiva), supporto allo stampaggio ad iniezione e monitoraggio delle scadenze d’ordine a supporto del team logistico.</p>
             </div>
             <div class="timeline-item">
-                <h3>🌾 Collaborazione Azienda Agricola di Famiglia</h3>
-                <p class="timeline-date">2015 - Presente (attività continuativa)</p>
+                <h3>Collaborazione Azienda Agricola di Famiglia</h3>
+                <p class="timeline-date">2021 - Presente (attività continuativa)</p>
                 <p>Gestione operativa dei terreni agricoli di famiglia: manutenzione stagionale, cura delle colture e supporto alle fasi di raccolta. Attività che ha sviluppato senso di responsabilità, problem solving pratico, lavoro manuale e autonomia nella gestione di macchinari e piccole emergenze sul campo.</p>
             </div>
             <div class="timeline-item">
-                <h3>Diploma Perito Meccano-plastico - 100/100</h3>
+                <h3>Diploma Perito Meccatronico, opzione Materie Plastiche</h3>
                 <p class="timeline-date">2017 - 2022</p>
-                <p>ITS Luigi Einaudi, Correggio (RE). Specializzazione in materiali polimerici, patentino Robotica COMAU, rappresentante d’Istituto per 2 anni e project leader del team FLL Italia (1° posto interregionale).</p>
+                <p>Votazione finale: 100/100.</p>
+                <p>Specializzazione in materie plastiche e materiali polimerici.</p>
+                <p>Rappresentante d'Istituto per 2 anni consecutivi.</p>
+                <p>Project Leader del team First Lego League Italia (1° posto interregionale).</p>
             </div>
         </div>
     </section>
@@ -608,7 +653,7 @@
             <div class="contact-item">
                 <div class="contact-icon">📍</div>
                 <h3>Località</h3>
-                <p>Fabbrico (Reggio Emilia)</p>
+                <p>Reggio Emilia</p>
             </div>
         </div>
     </section>
