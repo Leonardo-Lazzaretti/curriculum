@@ -251,6 +251,9 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             border: 1px solid var(--color-border);
+            height: 100%;          /* nuovo: tutte le card stessa altezza */
+            display: flex;         /* nuovo */
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -270,6 +273,7 @@
 
         .project-content {
             padding: 25px;
+            flex: 1;
         }
 
         .project-card h3 {
@@ -399,11 +403,14 @@
             text-decoration: none;
             color: inherit;
             display: block;
+            height: 100%;
         }
 
         .project-link:hover .project-card {
-            transform: translateY(-4px);
-            box-shadow
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+            border-color: var(--color-primary);
+            cursor: pointer;
         }
         
     </style>
@@ -524,14 +531,18 @@
 
     <section class="section" id="progetti">
         <h2 class="section-title">Progetti Principali</h2>
+        <p style="text-align:center; font-size:0.95rem; color: var(--color-text-secondary); margin-top:-10px;">
+            Clicca sulle card per aprire il dettaglio di ogni progetto.
+        </p>
             <div class="projects-grid">
+
+                <!-- Card FLL -->
                 <a href="progetto-fll.html" class="project-link">
                     <div class="project-card">
                         <div class="project-img">🏆</div>
                         <div class="project-content">
                             <h3>First Lego League Italia - 1° Posto</h3>
-                            <p>Project leader del team vincitore a livello interregionale. 
-                                Progettazione e programmazione robot Lego, gestione del gruppo di studenti dell'Einaudi durante tutte le fasi della competizione.</p>
+                            <p>Project leader del team vincitore a livello interregionale: progettazione e programmazione del robot Lego, strategia di gara e coordinamento del gruppo studenti durante tutte le missioni.</p>
                             <div class="project-tags">
                                 <span class="tag">Team Leading</span>
                                 <span class="tag">Robotica</span>
@@ -540,30 +551,41 @@
                         </div>
                     </div>
                 </a>
-            <div class="project-card">
-               <div class="project-img">📜</div>
-               <div class="project-content">
-                   <h3>Certificazione Robotica Industriale COMAU</h3>
-                   <p>Percorso certificato di uso e programmazione robot industriali COMAU, con esercitazioni pratiche su robot reali: movimentazione assi, traiettorie, logica di programma e sicurezza in cella.</p>
-                   <div class="project-tags">
-                        <span class="tag">Robotica</span>
-                        <span class="tag">Automazione</span>
-                        <span class="tag">Certificazione</span>
-                   </div>
-              </div>
-            </div>
-            <div class="project-card">
-                <div class="project-img">🎓</div>
-                <div class="project-content">
-                    <h3>Docenza e Formazione STEM</h3>
-                    <p>Oltre 60 ore di docenza tra Sistemi e Automazioni Industriali, corsi Solidworks 3D, recupero Fisica e tutoraggio. Commissario interno Maturità 2025 per Meccanica.</p>
-                    <div class="project-tags">
-                        <span class="tag">Didattica</span>
-                        <span class="tag">Comunicazione</span>
-                        <span class="tag">Mentoring</span>
+
+                <!-- Card COMAU -->
+                <a href="progetto-comau.html" class="project-link">
+                    <div class="project-card">
+                        <div class="project-img">📜</div>
+                        <div class="project-content">
+                            <h3>Certificazione Robotica Industriale COMAU</h3>
+                            <p>Certificazione di uso e programmazione robot industriali COMAU:
+    impostazione di             movimenti, traiettorie e logica di programma con
+    attenzione alla             sicurezza in cella.</p>
+                            <div class="project-tags">
+                                <span class="tag">Robotica</span>
+                                <span class="tag">Automazione</span>
+                                <span class="tag">Certificazione</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </a>
+
+                <!-- Card Docenza -->
+                <a href="progetto-docenza.html" class="project-link">
+                    <div class="project-card">
+                        <div class="project-img">📚</div>
+                        <div class="project-content">
+                            <h3>Docenza e Formazione STEM</h3>
+                            <p>Due anni di docenza STEM: Sistemi e Automazioni Industriali, corsi PNRR Solidworks 3D, recuperi di Fisica e ruolo di docente interno alla Maturità 2025 in Meccanica. Orientamento in Entrata "OpenDay".</p>
+                            <div class="project-tags">
+                                <span class="tag">Didattica</span>
+                                <span class="tag">Comunicazione</span>
+                                <span class="tag">Mentoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
             <div class="project-card">
                 <div class="project-img">🤖</div>
                 <div class="project-content">
@@ -576,6 +598,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="project-card">
                 <div class="project-img">📐</div>
                 <div class="project-content">
