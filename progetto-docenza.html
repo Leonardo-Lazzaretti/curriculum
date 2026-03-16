@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Docenza e Formazione STEM - Leonardo Lazzaretti</title>
+
+    <!-- Riusa gli stessi stili globali -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            background: linear-gradient(135deg, #0ea5e9 0%, #22c1c3 35%, #020617 100%);
+        }
+
+        .project-page {
+            max-width: 960px;
+            margin: 40px auto 80px;
+            padding: 32px 24px 48px;
+            background: #f9fafb;
+            border-radius: 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: #0f172a;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #e5f3ff;
+        }
+
+        .back-link:hover {
+            color: #dbeafe;
+        }
+
+        .project-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .project-subtitle {
+            font-size: 1rem;
+            color: #4b5563;
+            margin-bottom: 32px;
+        }
+
+        .project-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.6fr);
+            gap: 32px;
+            align-items: flex-start;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            margin: 32px 0 10px;
+            color: #111827;
+            font-weight: 700;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #eef2ff;
+            border: 1px solid #e5e7eb;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .project-page section p {
+            margin-left: 16px;
+        }
+
+        .project-page ul {
+            padding-left: 28px;
+            margin-top: 4px;
+            margin-bottom: 16px;
+        }
+
+        .project-page li {
+            margin-bottom: 2px;
+        }
+
+        .project-page p br {
+            display: block;
+            content: '';
+            margin-top: -8px;
+            height: 0;
+        }
+
+        .project-images {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .project-images img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .project-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<main class="project-page">
+    <a href="index.html#progetti" class="back-link">← Torna ai progetti 🏠</a>
+
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:15px; margin-bottom:10px;">
+        <h1 class="project-title" style="margin:0;">
+            Docenza e Formazione STEM
+            <span style="background:#2563eb; color:white; padding:4px 8px; border-radius:999px;
+                         font-size:0.8rem; font-weight:600; white-space:nowrap; margin-left:12px;">
+                2 anni di esperienza
+            </span>
+        </h1>
+    </div>
+
+    <p class="project-subtitle">
+        Attività di docenza tecnica presso ITS Luigi Einaudi: insegnamento di Sistemi e Automazioni Industriali
+        nel triennio, corsi pomeridiani finanziati PNRR, recuperi di Fisica e partecipazione attiva a maturità
+        e orientamento in entrata.
+    </p>
+
+    <div class="project-layout">
+        <!-- Colonna sinistra: testo -->
+        <section>
+
+            <h2 class="section-title">Descrizione del progetto</h2>
+            <p>
+                Da due anni svolgo attività di <strong>docenza STEM</strong> in Sistemi e Automazioni Industriali
+                per le classi terza, quarta e quinta meccanici dell’ITS Luigi Einaudi, con gestione autonoma
+                di lezioni, verifiche e coordinamento con il consiglio di classe.
+            </p>
+
+            <p>
+                In parallelo sono stato coinvolto in attività ad alto livello di responsabilità didattica:
+                <strong>docente interno all’esame di Stato 2025</strong>, referente per l’<strong>orientamento in entrata</strong>
+                dei futuri iscritti e docente dei <strong>corsi PNRR di Solidworks 3D</strong> per tutto il triennio.
+            </p>
+
+            <h2 class="section-title">Cosa ho fatto</h2>
+            <p>
+                - <strong>Docenza Sistemi e Automazioni:</strong> pianificazione annuale del programma,
+                lezioni teorico-pratiche su sensori, attuatori, PLC e robotica di base, preparazione di verifiche
+                scritte e pratiche per classi 3°, 4° e 5°.<br>
+                - <strong>Docente interno Maturità 2025:</strong> correzione della seconda prova scritta di indirizzo,
+                partecipazione ai colloqui orali con domande tecnico-disciplinari e contributo alle decisioni collegiali
+                sui voti finali.<br>
+                - <strong>Orientamento in entrata e Open Day:</strong> accoglienza studenti di terza media e famiglie,
+                presentazione dell’offerta formativa meccatronica, visite guidate ai laboratori e organizzazione di
+                pomeriggi laboratoriali “hands-on” per far provare attrezzature e banchi prova.<br>
+                - <strong>Corsi PNRR Solidworks 3D:</strong> progettazione e conduzione di 2 corsi pomeridiani
+                per le tre classi del triennio, con moduli base per i meno esperti (sketch, estrusioni, assiemi semplici)
+                e moduli avanzati orientati al mondo del lavoro (messe in tavola, tolleranze, piccoli progetti completi).<br>
+                - <strong>Recupero Fisica per il biennio:</strong> percorso dedicato agli studenti con gravi insufficienze
+                e debito, revisione dei fondamentali di cinematica, dinamica e statica e preparazione mirata alla
+                verifica di recupero prima dell’inizio del nuovo anno scolastico.
+            </p>
+
+            <h2 class="section-title">Risultati e competenze</h2>
+            <p>
+                <strong>Risultati principali:</strong><br>
+                • Due anni consecutivi di docenza stabile su tre classi del triennio meccanico.[file:309]<br>
+                • Nomina a <strong>docente interno</strong> per l’Esame di Stato 2025 in Meccanica, con pieno coinvolgimento
+                  in prove scritte e orali.<br>
+                • Elevata partecipazione agli Open Day e alle attività di orientamento, con feedback positivi da
+                  studenti e famiglie.<br>
+                • Completamento di due cicli di corsi PNRR Solidworks per tutto il triennio.
+            </p>
+
+            <p>
+                <strong>Competenze sviluppate:</strong><br>
+                • Didattica tecnica e gestione di classe in contesti laboratoriali.<br>
+                • Capacità di spiegare concetti complessi (automazione, meccanica, Fisica) a livelli diversi,
+                  adattando linguaggio e esempi.<br>
+                • Progettazione di percorsi formativi strutturati (programmazione annuale, corsi PNRR,
+                  percorsi di recupero).<br>
+                • Valutazione oggettiva e collegiale alle prove d’esame, con attenzione a rubriche e criteri condivisi.<br>
+                • Public speaking e comunicazione con studenti, genitori e colleghi durante Open Day,
+                  consigli di classe e sessioni d’esame.
+            </p>
+        </section>
+
+        <!-- Colonna destra: immagini -->
+        <aside>
+            <div class="project-images">
+                <div>
+                    <img src="docenza-esame-maturita.PNG" alt="Commissione Esame di Stato 2025">
+                    <div class="image-caption">Partecipazione Esame di Stato 2025 come docente interno di Meccanica.</div>
+                </div>
+
+                <div>
+                    <img src="corso-solidworks.jpg" alt="Corso pomeridiano Solidworks 3D">
+                    <div class="image-caption">Lezione pomeridiana dei corsi PNRR Solidworks 3D con il triennio meccanico.</div>
+                </div>
+
+                <div>
+                    <img src="orientamento-open-day.jpg" alt="Orientamento e Open Day ITS Luigi Einaudi">
+                    <div class="image-caption">Attività di orientamento in entrata durante Open Day e pomeriggi laboratoriali.</div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+</body>
+</html>

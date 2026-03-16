@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>First Lego League Italia - Leonardo Lazzaretti</title>
+
+    <!-- Se vuoi riusare gli stessi stili della home -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Stili minimi aggiuntivi per la pagina progetto */
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            background: linear-gradient(135deg, #0ea5e9 0%, #22c1c3 35%, #020617 100%);/* azzurrino in alto, scuro in basso */
+        }
+
+        .project-page {
+            max-width: 960px;
+            margin: 40px auto 80px;
+            padding: 32px 24px 48px;
+            background: #f9fafb;      /* lo sfondo chiaro che ti piaceva prima */
+            border-radius: 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: #0f172a;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #e5f3ff;
+        }
+
+        .back-link:hover {
+            color: #dbeafe;
+        }
+
+        .project-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .project-subtitle {
+            font-size: 1rem;
+            color: #4b5563;
+            margin-bottom: 40px;
+        }
+
+        .project-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.6fr);
+            gap: 32px;
+            align-items: flex-start;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            margin: 32px 0 10px;
+            color: #111827;
+            font-weight: 700;         /* rettangolo leggero attorno al titolo */
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #eef2ff;           /* azzurrino chiarissimo */
+            border: 1px solid #e5e7eb;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;  /* non distanziare il primo */
+        }
+
+        .project-images {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .project-images img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .project-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .project-page ul {
+            padding-left: 40px;
+            margin-top: 4px;    /* solo 4px sopra, era 8px/12px */
+            margin-bottom: 16px;
+        }
+
+        .project-page li {
+            margin-bottom: 2px;
+        }
+
+        .project-page section p {
+            margin-left: 16px;   /* prova 16, se vuoi più rientro usa 24 o 32 */
+        }
+
+        .project-page p br {
+            display: block;
+            content: '';
+            margin-top: -8px;   /* tira su di 8px */
+            height: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="project-page">
+        <a href="index.html#progetti" class="back-link"> ← Torna ai progetti 🏠
+        </a>
+
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:15px; margin-bottom:10px;">
+        <h1 class="project-title" style="margin:0;">
+        First Lego League Italia - 1° Posto interregionale
+        <span style="background: #059669; color: white; padding: 4px 8px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; vertical-align: middle; margin-left: 12px;">🏆 1° Posto</span></h1>
+    </h1>
+    <img src="logo-fll-italia.png" alt="Logo FIRST LEGO League Italia"
+         style="height:56px; object-fit:contain;">
+    </div>
+
+        <p class="project-subtitle">
+            Project leader del team ITS Luigi Einaudi: progettazione e programmazione robot, 
+            coordinamento del gruppo studenti e gestione della gara su più missioni.
+        </p>
+
+        <div class="project-layout">
+            <!-- Colonna sinistra: testo -->
+            <section>
+                <h2 class="section-title">Descrizione del progetto</h2>
+                <p>
+                    <strong>First Lego League Italia 2019</strong> – Competizione robotica + innovazione per studenti delle superiori. La gara si suddivide in due componenti:
+                </p>
+
+                <ul>
+                    <li><strong>Robot Game:</strong> robot Lego Mindstorms EV3 programmato deve completare 15 o più missioni in 2.5 minuti</li>
+                    <li><strong>Progetto Scientifico:</strong> ricerca su una problematica reale del tema della stagione (nostro:
+                        <em>riciclo plastica</em>) con soluzioni concrete da presentare alla giuria</li>
+                </ul>
+
+                <p>
+                    <strong>Il mio ruolo:</strong> Project Leader + Programmatore Principale del team ITS Luigi Einaudi (Correggio, RE). Ho guidato progettazione/strategia e scritto il codice EV3 Classroom con il mio gruppo formato da più studenti, vincendo il <strong>1° posto interregionale</strong>.
+                </p>
+
+                <h2 class="section-title">Cosa ho fatto</h2>
+                <p>
+                    - <strong>Progettazione robot:</strong> Studio del campo di gara, scelta componenti Lego, 
+                        modellazione 3D e test prototipi (50+ ore di costruzione)
+                    <br>
+                    - <strong>Programmazione:</strong> Sviluppo codice con <strong>EV3 Classroom</strong> 
+                        (linguaggio a blocchi <em>simile a Scratch di MIT</em>) per 15 missioni 
+                        (movimenti, sensori colore/distanza, bracci meccanici automatici)
+                    <br>
+                    - <strong>Team management:</strong> Assegnazione compiti, risoluzione conflitti, 
+                    pianificazione sprint settimanali per rispettare deadline
+                    <br>
+                    - <strong>Gara:</strong> Strategia in tempo reale, debug sotto pressione, presentazione 
+                    del progetto robotico alla giuria
+                </p>
+
+                <h2 class="section-title">Risultati e competenze</h2>
+                <p>
+                    <strong>Risultato:</strong> <strong>1° posto interregionale</strong> (Emilia-Romagna), 
+                    qualificazione regionale, riconoscimento ufficiale FLL Italia.
+                    <br><br>
+                    <strong>Competenze sviluppate:</strong>
+                    <br>• Leadership tecnica e gestione team under stress
+                    <br>• Programmazione robotica (Lego Mindstorms EV3)
+                    <br>• Problem solving pratico (debug in 2 minuti)
+                    <br>• Comunicazione tecnica (presentazione giuria)
+                    <br>• Pianificazione progetti con scadenze rigide
+                    <br><br>
+                    <em>Trasferibili direttamente in stage/progetti industriali</em>
+                </p>
+            </section>
+
+            <!-- Colonna destra: immagini -->
+            <aside>
+                <div class="project-images">
+                    <!-- Immagine 1: team -->
+                    <div>
+                        <img src="fll-team.jpg" alt="Team First Lego League ITS Luigi Einaudi">
+                        <div class="image-caption">Il team durante la competizione First Lego League.</div>
+                    </div>
+
+                    <!-- Immagine 2: robot -->
+                    <div>
+                        <img src="fll-robot.jpg" alt="Robot Lego Mindstorms completato">
+                        <div class="image-caption">Il robot Lego Mindstorms pronto per le missioni di gara.</div>
+                    </div>
+
+                    <!-- Spazio per altre immagini future -->
+                    <div>
+                        <!-- Potrai duplicare questo blocco per aggiungere altre foto -->
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>

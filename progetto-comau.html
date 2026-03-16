@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificazione Robotica Industriale COMAU - Leonardo Lazzaretti</title>
+
+    <!-- Se vuoi riusare gli stessi stili della home -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Stili minimi aggiuntivi per la pagina progetto */
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            background: linear-gradient(135deg, #0ea5e9 0%, #22c1c3 35%, #020617 100%);
+        }
+
+        .project-page {
+            max-width: 960px;
+            margin: 40px auto 80px;
+            padding: 32px 24px 48px;
+            background: #f9fafb;
+            border-radius: 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: #0f172a;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #e5f3ff;
+        }
+
+        .back-link:hover {
+            color: #dbeafe;
+        }
+
+        .project-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .project-subtitle {
+            font-size: 1rem;
+            color: #4b5563;
+            margin-bottom: 32px;
+        }
+
+        .project-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.6fr);
+            gap: 32px;
+            align-items: flex-start;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            margin: 32px 0 10px;
+            color: #111827;
+            font-weight: 700;           /* rettangolo leggero attorno al titolo */
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #eef2ff;        /* azzurrino chiarissimo */
+            border: 1px solid #e5e7eb;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0; /* non distanziare il primo */
+        }
+
+        .project-images {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .project-images img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        .project-page ul {
+            padding-left: 28px;
+            margin-top: 4px;   /* solo 4px sopra */
+            margin-bottom: 16px;
+        }
+
+        .project-page li {
+            margin-bottom: 2px;   /* avvicina testo dopo br */
+        }
+
+        .project-page p br {
+            display: block;
+            content: '';
+            margin-top: -8px;   /* tira su di 8px */
+            height: 0;
+        }
+
+        .project-page section p {
+            margin-left: 16px;   /* rientro descrizioni a sinistra */
+        }
+
+        @media (max-width: 768px) {
+            .project-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<main class="project-page">
+    <a href="index.html#progetti" class="back-link">← Torna ai progetti 🏠</a>
+
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:15px; margin-bottom:10px;">
+        <h1 class="project-title" style="margin:0;">
+            Robotica Industriale COMAU
+            <span style="background: #059669; color: white; padding: 4px 8px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; vertical-align: middle; margin-left: 12px;">
+                ✅ Corso intensivo certificato
+            </span>
+        </h1>
+        <img src="logo-comau.png" alt="Logo COMAU"
+             style="height:56px; object-fit:contain;">
+    </div>
+
+    <p class="project-subtitle">
+        Percorso certificato di uso e programmazione robot industriali COMAU:
+        movimentazione assi, gestione delle traiettorie, logica di programma
+        e principi di sicurezza in cella robotizzata.
+    </p>
+
+    <div class="project-layout">
+        <!-- Colonna sinistra: testo -->
+        <section>
+
+            <h2 class="section-title">Descrizione del progetto</h2>
+            <p>
+                <strong>Corso COMAU Robotica Industriale</strong> – percorso intensivo svolto su robot reali in cella didattica,
+                focalizzato su programmazione, sicurezza e gestione delle traiettorie. Il corso prevedeva una parte teorica
+                introduttiva e numerose esercitazioni pratiche direttamente sul braccio robotico COMAU.
+            </p>
+
+            <ul>
+                <li>Uso del pannello di programmazione COMAU per comandare i movimenti del robot.</li>
+                <li>Impostazione di punti, traiettorie e velocità su scenari di lavoro realistici.</li>
+            </ul>
+
+            <p>
+                <strong>Il mio ruolo:</strong> partecipante al corso con focus sulla parte tecnica avanzata:
+                ho lavorato su programmazione dei movimenti, gestione I/O della cella e analisi delle condizioni di sicurezza
+                per l’utilizzo del robot in ambito industriale.
+            </p>
+
+            <h2 class="section-title">Cosa ho fatto</h2>
+            <p>
+                - <strong>Programmazione robot:</strong> creazione e modifica di programmi per movimenti punto‑punto e
+                traiettorie continue, gestione di velocità, accelerazioni e interpolazioni.<br>
+                - <strong>Setup cella:</strong> definizione sistemi di coordinate, posizionamento riferimenti e verifica
+                degli spazi di lavoro e delle zone di sicurezza.<br>
+                - <strong>Gestione I/O:</strong> utilizzo di segnali digitali per comandare pinze/attuatori e sincronizzare
+                il robot con elementi esterni della cella didattica.<br>
+                - <strong>Debug e ottimizzazione:</strong> correzione di possibili collisioni, ottimizzazione dei percorsi
+                e riduzione dei tempi ciclo nelle esercitazioni proposte.
+            </p>
+
+            <h2 class="section-title">Risultati e competenze</h2>
+            <p>
+                <strong>Risultato:</strong> conseguimento della <strong>certificazione COMAU</strong> di uso e programmazione
+                base del robot industriale, con prova pratica finale in cella.<br><br>
+                <strong>Competenze sviluppate:</strong><br>
+                • Programmazione robot industriali COMAU (movimenti, I/O, logica di base)<br>
+                • Consapevolezza delle norme di sicurezza in cella robotizzata<br>
+                • Lettura di layout e interpretazione dei vincoli fisici di un impianto<br>
+                • Problem solving tecnico su errori di percorso, limiti software e piccoli guasti<br>
+                • Capacità di trasferire concetti di robotica agli studenti durante le lezioni STEM
+            </p>
+        </section>
+
+        <!-- Colonna destra: immagini -->
+        <aside>
+            <div class="project-images">
+                <!-- Attestato -->
+                <div>
+                    <img src="attestato-comau.jpg" alt="Attestato corso robotica COMAU">
+                    <div class="image-caption">Attestato del corso intensivo di programmazione robot COMAU.</div>
+                </div>
+
+                <!-- Foto braccio robotico -->
+                <div>
+                    <img src="robot-comau.png" alt="Braccio robotico COMAU in cella didattica">
+                    <div class="image-caption">Braccio robotico COMAU utilizzato durante le esercitazioni pratiche.</div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+</body>
+</html>
