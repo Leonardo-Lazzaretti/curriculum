@@ -748,18 +748,29 @@
 
     <script>
         function initLanguageToggle() {
-        const isEnglish = window.location.pathname.includes('-en.html');
-        const toggleBtn = document.createElement('button');
-        toggleBtn.innerText = isEnglish ? '🇮🇹 Italiano' : '🇬🇧 English';
-        toggleBtn.id = 'lang-toggle';
-        toggleBtn.style.position = 'fixed'; toggleBtn.style.top = '20px'; toggleBtn.style.right = '20px';
-        toggleBtn.style.zIndex = '1000'; toggleBtn.style.background = 'var(--color-primary)'; toggleBtn.style.color = 'white';
-        toggleBtn.style.border = 'none'; toggleBtn.style.padding = '10px 20px'; toggleBtn.style.borderRadius = '5px';
-        toggleBtn.style.cursor = 'pointer'; toggleBtn.onclick = () => {
-            const newPath = isEnglish ? window.location.pathname.replace('-en.html', '.html') : window.location.pathname.replace('.html', '-en.html');
-            window.location.href = newPath;
-        };
-        document.body.appendChild(toggleBtn);
+            const isEnglish = window.location.pathname.includes('-en.html');
+            const toggleBtn = document.createElement('button');
+            toggleBtn.innerText = isEnglish ? '🇮🇹 Italiano' : '🇬🇧 English';
+            toggleBtn.id = 'lang-toggle';
+            
+            // Stili
+            toggleBtn.style.position = 'fixed'; 
+            toggleBtn.style.top = '20px'; 
+            toggleBtn.style.right = '20px';
+            toggleBtn.style.zIndex = '1000'; 
+            toggleBtn.style.background = 'var(--color-primary)'; 
+            toggleBtn.style.color = 'white';
+            toggleBtn.style.border = 'none'; 
+            toggleBtn.style.padding = '10px 20px'; 
+            toggleBtn.style.borderRadius = '5px';
+            toggleBtn.style.cursor = 'pointer'; 
+            
+            // Nuova logica semplificata per GitHub Pages
+            toggleBtn.onclick = () => {
+                window.location.href = isEnglish ? 'index.html' : 'index-en.html';
+            };
+            
+            document.body.appendChild(toggleBtn);
         }
         initLanguageToggle();
     </script>
