@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Professionale - Ingegnere Meccanico</title>
+    <style>
+        :root {
+            --color-primary: #2d7a8f;
+            --color-primary-hover: #1d6078;
+            --color-accent: #32b8c6;
+            --color-dark: #1f2121;
+            --color-light: #fcfcf9;
+            --color-gray: #626c71;
+            --color-border: rgba(94, 82, 64, 0.2);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-bg: #1f2121;
+                --color-surface: #262828;
+                --color-text: #f5f5f5;
+                --color-text-secondary: rgba(167, 169, 169, 0.7);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --color-bg: #fcfcf9;
+                --color-surface: #ffffff;
+                --color-text: #134252;
+                --color-text-secondary: #626c71;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: patternMove 40s linear infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes patternMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(60px, 60px); }
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 1;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            width: 190px;
+            height: 190px;
+            margin: 0 auto 30px;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-img img {
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
+        }
+
+        .lions-badge {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            height: 50px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;              /* puoi lasciare 15 se ti piace di più */
+            justify-content: center;
+            align-items: center;    /* allinea verticalmente */
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;   /* centra contenuto interno */
+            gap: 8px;
+            min-width: 190px;          /* STESSA LARGHEZZA per entrambi */
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--color-primary);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--color-primary);
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .skill-card {
+            background: var(--color-surface);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid var(--color-border);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            color: var(--color-primary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: var(--color-surface);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid var(--color-border);
+            height: 100%;          /* nuovo: tutte le card stessa altezza */
+            display: flex;         /* nuovo */
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .project-content {
+            padding: 25px;
+            flex: 1;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+            color: var(--color-primary);
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: rgba(45, 122, 143, 0.1);
+            color: var(--color-primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            background: var(--color-surface);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--color-border);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--color-primary);
+        }
+
+        .contact-item a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: var(--color-dark);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 80px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-top: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--color-primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            border: 3px solid var(--color-bg);
+        }
+
+        .timeline-item h3 {
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+
+        .timeline-date {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+
+        .project-link:hover .project-card {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+            border-color: var(--color-primary);
+            cursor: pointer;
+        }
+        
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px; /* Spessore della barra */
+            background: transparent;
+            z-index: 9999; /* Assicura che sia sopra a tutto */
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0%; /* Parte da zero */
+            background: var(--color-accent); /* Usa il tuo azzurro/cyan */
+            transition: width 0.1s ease-out; /* Rende il movimento fluido */
+            box-shadow: 0 0 10px var(--color-accent); /* Effetto "glow" leggero */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="profile-wrapper">
+                <div class="profile-img">
+                    <img src="img profilo leonardo.jpg" alt="Leonardo Lazzaretti">
+                </div>
+            <img src="lions-logo.png" alt="Lions Clubs International" class="lions-badge">
+            </div>
+            <h1>Leonardo Lazzaretti</h1>
+            <p class="subtitle">Vehicle Mechanical Engineering Student | Mechanical-Plastics Specialist | STEM Teacher</p>
+            <div class="cta-buttons">
+                <a href="#progetti" class="btn btn-primary">📂 View Portfolio</a>
+                <a href="#contatti" class="btn btn-secondary">📧 Contact Me</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8;">
+            <p>
+                3rd-year Vehicle Mechanical Engineering student at UNIMORE, graduated with honors (100/100) as a Mechanical-Plastics Technician from ITS Luigi Einaudi. Currently a STEM Teacher in Industrial Systems and Automation at the same institute, with extensive experience in CAD design (Solidworks), industrial robotics (COMAU certified), and technical project management. Served as Student Representative for 2 years and project leader of the regional winning team of the First Lego League Italy. Red Cross volunteer and member of Leo Club International, where I cultivate ethical leadership, community service, and collaboration in structured organizational settings.
+            </p>
+        </div>
+    </section>
+
+   <section class="section" style="background: var(--color-surface);">
+        <h2 class="section-title">Soft Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">💬</div>
+                <h3>Effective Communication</h3>
+                <p>Developed through teaching, tutoring, student recruitment, and representative roles. Skilled at translating complex technical concepts for diverse audiences.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🧩</div>
+                <h3>Problem Solving</h3>
+                <p>Honed in real-world scenarios: addressing student body issues as a Representative, resolving technical challenges during corporate internships, and in mechanical design projects.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">👥</div>
+                <h3>Team Leadership</h3>
+                <p>Experience as a First Lego League project leader (1st place), Student Representative, coordinating student groups, and managing classrooms independently during teaching.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">❤️</div>
+                <h3>Empathy</h3>
+                <p>Strengthened by volunteering with the Italian Red Cross and active participation in Lions Club International, focusing on active listening, community service, and cultural sensitivity.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">⏱️</div>
+                <h3>Deadline Management</h3>
+                <p>Ability to meet strict deadlines across multiple parallel activities: university studies, STEM teaching, extracurricular projects, and volunteering.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🔄</div>
+                <h3>Flexibility</h3>
+                <p>High adaptability to change and new situations, demonstrated by successfully switching between roles (student, teacher, volunteer) and variable work environments.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">🔧</div>
+                <h3>3D CAD Design</h3>
+                <p>Advanced Solidworks (modeling, assemblies, technical drawings), basic AutoCAD, UNIMORE CAD Modeling exam completed, design of mechanical components and structural supports.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🤖</div>
+                <h3>Robotics & Automation</h3>
+                <p>COMAU Certification for industrial robot use and programming, basics of CNC and automated systems, teaching experience in Industrial Systems and Automation.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🏭</div>
+                <h3>Plastics & Processing</h3>
+                <p>Science and technology of polymer materials, injection molding, pellet extrusion, process parameters, and basic defect analysis.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">📏</div>
+                <h3>Quality Control & Metrology</h3>
+                <p>Proficient with calipers and micrometers, impact testing, density and hardness testing, quality control on plastic granules for industrial production.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">👨‍🏫</div>
+                <h3>Technical Instruction & Mentoring</h3>
+                <p>Design and delivery of STEM lessons, classroom management, individual and group tutoring (Solidworks, Physics, Math, Technical Drawing).</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">💻</div>
+                <h3>Digital Tools & Office</h3>
+                <p>Usage of Word, Excel, and PowerPoint for technical documentation, lab reports, student presentations, and orientation activities.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">📋</div>
+                <h3>Project Management</h3>
+                <p>Planning activities and timelines for school projects and FLL, coordinating student teams, respecting deadlines and objectives.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">📢</div>
+                <h3>Technical Communication</h3>
+                <p>Technical presentations for student recruitment, explaining complex concepts to high schoolers, collaborating with faculty and corporate partners.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="progetti">
+        <h2 class="section-title">Main Projects</h2>
+        <p style="text-align:center; font-size:0.95rem; color: var(--color-text-secondary); margin-top:-10px;">
+            Click on the cards to see project details.
+        </p>
+            <div class="projects-grid">
+
+                <a href="progetto-fll-en.html" class="project-link">
+                    <div class="project-card">
+                        <div class="project-img">🏆</div>
+                        <div class="project-content">
+                            <h3>First Lego League Italy - 1st Place</h3>
+                            <p>Project leader of the regional winning team: robot design and programming, competition strategy, and student team coordination throughout all missions.</p>
+                            <div class="project-tags">
+                                <span class="tag">Team Leading</span>
+                                <span class="tag">Robotics</span>
+                                <span class="tag">Problem Solving</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="progetto-comau-en.html" class="project-link">
+                    <div class="project-card">
+                        <div class="project-img">📜</div>
+                        <div class="project-content">
+                            <h3>COMAU Industrial Robotics Certification</h3>
+                            <p>Certification in the use and programming of COMAU industrial robots: setting movements, trajectories, and program logic with a focus on cell safety.</p>
+                            <div class="project-tags">
+                                <span class="tag">Robotics</span>
+                                <span class="tag">Automation</span>
+                                <span class="tag">Certification</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="progetto-docenza-en.html" class="project-link">
+                    <div class="project-card">
+                        <div class="project-img">📚</div>
+                        <div class="project-content">
+                            <h3>STEM Teaching & Training</h3>
+                            <p>Two years of STEM teaching: Industrial Automation, Solidworks 3D courses, Physics tutoring, and internal examiner for the 2025 National Graduation Exam in Mechanics.</p>
+                            <div class="project-tags">
+                                <span class="tag">Education</span>
+                                <span class="tag">Communication</span>
+                                <span class="tag">Mentoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            <div class="project-card">
+                <div class="project-img">🤖</div>
+                <div class="project-content">
+                    <h3>First Lego League 2026 Tutor</h3>
+                    <p>Tutoring project (30 hours) to prepare student teams for the 2026 FLL Italy competition. Technical support in robot programming, strategy, and team dynamics management.</p>
+                    <div class="project-tags">
+                        <span class="tag">Tutoring</span>
+                        <span class="tag">Robotics</span>
+                        <span class="tag">Coaching</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img">📐</div>
+                <div class="project-content">
+                    <h3>Roller Support Design</h3>
+                    <p>Complete academic design project: functional requirement study, 3D modeling in Solidworks, load and geometry specification compliance, and detailed technical documentation.</p>
+                    <div class="project-tags">
+                        <span class="tag">Solidworks 3D</span>
+                        <span class="tag">Design</span>
+                        <span class="tag">Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--color-surface);">
+        <h2 class="section-title">Experience & Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+            <h3>STEM Teacher - Industrial Systems & Automation</h3>
+            <p class="timeline-date">
+                October 2024 - July 2025<br>
+                October 2025 - Present
+            </p>
+            <p>
+                ITS Luigi Einaudi, Correggio (RE). Part-time contract (9 hours/week) for 11th, 12th, and 13th-grade mechanical classes. Responsibility for lessons, grading, and faculty board coordination.
+            </p>
+            <div style="margin-top: 20px; margin-left: 25px; padding-left: 15px; border-left: 3px solid var(--color-primary);">
+            <p style="margin-bottom: 10px;"><strong>Key Activities:</strong></p>
+            <p style="margin-bottom: 12px;"><strong>📋 Internal Examiner - 2025 National Graduation Exam</strong><br>
+                Member of the state board for the 2025 "Maturità" exams, evaluating written and oral tests in Mechanics and participating in final grade deliberations.</p>
+            <p style="margin-bottom: 12px;"><strong>💻 Solidworks 3D Instructor (40 hours)</strong><br>
+                Led two extracurricular Solidworks 3D courses, focusing on component modeling, assemblies, and production-ready technical drawings.</p>
+            <p style="margin-bottom: 12px;"><strong>⚛️ Physics Recovery Instructor (10 hours)</strong><br>
+                Targeted support for mechanical and IT students on kinematics, dynamics, and statics using a practical, exercise-based study method.</p>
+            <p style="margin-bottom: 12px;"><strong>🤖 First Lego League 2026 Project Tutor (30 hours)</strong><br>
+                Mentoring the student team for FLL Italy 2026: Lego Mindstorms programming, competition strategy, and scientific project presentation prep.</p>
+            <p style="margin-bottom: 0;"><strong>🧭 Student Orientation & Outreach Tutor</strong><br>
+                Led workshops and presentations for prospective students and families during Open Days. Explained the mechatronics curriculum and projects while managing technical tours for non-specialist audiences.</p>
+            </div>
+        </div>
+            <div class="timeline-item">
+                <h3>Member - Leo Club International</h3>
+                <p class="timeline-date">2025 - Present</p>
+                <p>The Leo Club is the youth organisation of Lions Clubs International. It is made up of teenagers and young adults (usually aged between 12 and 30) who devote their time to community service activities.<br>
+                    Active participation in community service, social projects, and fundraising. Role reinforces ethical leadership, social responsibility, and networking with professionals across diverse backgrounds.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Vehicle Mechanical Engineering Student</h3>
+                <p class="timeline-date">2022 - Present (3rd Year)</p>
+                <p>UNIMORE, Modena. Curriculum focused on design, applied mechanics, and CAD modeling. Successfully completed the CAD Modeling exam with a strong foundation in theoretical and practical mechanical design.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Industrial Robotics Certification (COMAU)</h3>
+                <p class="timeline-date">2022</p>
+                <p>Intensive industrial robot programming course. Hands-on experience with real robots, managing movement, trajectories, logic, and safety protocols. Certified upon passing theoretical and practical exams.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Internship - Quality Control & Plastic Production</h3>
+                <p class="timeline-date">2021</p>
+                <p>Nevicolor Srl (RE). Production department activities: quality control on extruded plastic granules (density, color, defect tests), supporting injection molding, and monitoring order deadlines for the logistics team.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Family Farm Operative</h3>
+                <p class="timeline-date">2021 - Present (Ongoing)</p>
+                <p>Operational management of family agricultural land: seasonal maintenance, crop care, and harvesting. Developed strong responsibility, practical problem-solving skills, and autonomy in machinery operation.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Diploma in Mechatronics (Plastics Option)</h3>
+                <p class="timeline-date">2017 - 2022</p>
+                <p>Final Grade: 100/100 (Honors).</p>
+                <p>Specialization in polymer materials and plastics.</p>
+                <p>School Student Representative for 2 consecutive years.</p>
+                <p>Project Leader for First Lego League Italy (1st place regional).</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contatti">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <a href="mailto:leolaz@italymail.com">leolaz@italymail.com</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">💼</div>
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/leonardo-lazzaretti-90351130b" target="_blank">linkedin.com/in/leonardo-lazzaretti</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <h3>Phone</h3>
+                <a href="tel:+393312467091">+39 331 2467091</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <h3>Location</h3>
+                <p>Reggio Emilia, Italy</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Leonardo Lazzaretti - Vehicle Mechanical Engineering Student | Professional Portfolio</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">Seeking mechanical engineering internships & STEM teaching opportunities · Driving License (B) · Own Vehicle</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script>
+    function initLanguageToggle() {
+    const isEnglish = window.location.pathname.includes('-en.html');
+    const toggleBtn = document.createElement('button');
+    toggleBtn.innerText = isEnglish ? '🇮🇹 Italiano' : '🇬🇧 English';
+    toggleBtn.id = 'lang-toggle';
+    toggleBtn.style.position = 'fixed'; toggleBtn.style.top = '20px'; toggleBtn.style.right = '20px';
+    toggleBtn.style.zIndex = '1000'; toggleBtn.style.background = 'var(--color-primary)'; toggleBtn.style.color = 'white';
+    toggleBtn.style.border = 'none'; toggleBtn.style.padding = '10px 20px'; toggleBtn.style.borderRadius = '5px';
+    toggleBtn.style.cursor = 'pointer'; toggleBtn.onclick = () => {
+        // Note: Assuming you save the Italian version as index.html and English as index-en.html
+        const newPath = isEnglish ? window.location.pathname.replace('-en.html', '.html') : window.location.pathname.replace('.html', '-en.html');
+        window.location.href = newPath;
+    };
+    document.body.appendChild(toggleBtn);
+    }
+    initLanguageToggle();
+    </script>
+
+    <script>
+    window.onscroll = function() {
+        updateProgressBar();
+    };
+
+    function updateProgressBar() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    }
+    </script>
+
+</body>
+</html>

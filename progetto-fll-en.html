@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Lego League Italy - Leonardo Lazzaretti</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Minimal additional styles for the project page */
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            background: linear-gradient(135deg, #0ea5e9 0%, #22c1c3 35%, #020617 100%); /* light blue at the top, dark at the bottom */
+        }
+
+        .project-page {
+            max-width: 960px;
+            margin: 40px auto 80px;
+            padding: 32px 24px 48px;
+            background: #f9fafb;      /* the light background you liked before */
+            border-radius: 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: #0f172a;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #e5f3ff;
+        }
+
+        .back-link:hover {
+            color: #dbeafe;
+        }
+
+        .project-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .project-subtitle {
+            font-size: 1rem;
+            color: #4b5563;
+            margin-bottom: 40px;
+        }
+
+        .project-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.6fr);
+            gap: 32px;
+            align-items: flex-start;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            margin: 32px 0 10px;
+            color: #111827;
+            font-weight: 700;         
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #eef2ff;           /* very light blue */
+            border: 1px solid #e5e7eb;     /* light rectangle around the title */
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;  /* do not space the first one */
+        }
+
+        .project-images {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .project-images img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .project-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .project-page ul {
+            padding-left: 40px;
+            margin-top: 4px;    /* only 4px on top, used to be 8px/12px */
+            margin-bottom: 16px;
+        }
+
+        .project-page li {
+            margin-bottom: 2px;
+        }
+
+        .project-page section p {
+            margin-left: 16px;   /* try 16, if you want more indent use 24 or 32 */
+        }
+
+        .project-page p br {
+            display: block;
+            content: '';
+            margin-top: -8px;   /* pull up by 8px */
+            height: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="project-page">
+        <a href="index.html#progetti" class="back-link"> ← Back to projects 🏠
+        </a>
+
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:15px; margin-bottom:10px;">
+        <h1 class="project-title" style="margin:0;">
+        First Lego League Italy - 1st Place Interregional
+        <span style="background: #059669; color: white; padding: 4px 8px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; vertical-align: middle; margin-left: 12px;">🏆 1st Place</span></h1>
+    </h1>
+    <img src="logo-fll-italia.png" alt="FIRST LEGO League Italy Logo"
+         style="height:56px; object-fit:contain;">
+    </div>
+
+        <p class="project-subtitle">
+            Project leader of the ITS Luigi Einaudi team: robot design and programming, 
+            student group coordination, and multi-mission competition management.
+        </p>
+
+        <div class="project-layout">
+            <section>
+                <h2 class="section-title">Project Description</h2>
+                <p>
+                    <strong>First Lego League Italy 2019</strong> – Robotics + innovation competition for high school students. The competition is divided into two components:
+                </p>
+
+                <ul>
+                    <li><strong>Robot Game:</strong> programmed Lego Mindstorms EV3 robot must complete 15 or more missions in 2.5 minutes</li>
+                    <li><strong>Scientific Project:</strong> research on a real-world problem related to the season's theme (ours:
+                        <em>plastic recycling</em>) with concrete solutions to present to the judges</li>
+                </ul>
+
+                <p>
+                    <strong>My role:</strong> Project Leader + Lead Programmer of the ITS Luigi Einaudi team (Correggio, RE). I guided the design/strategy and wrote the EV3 Classroom code with my group of multiple students, winning <strong>1st place interregional</strong>.
+                </p>
+
+                <h2 class="section-title">What I did</h2>
+                <p>
+                    - <strong>Robot design:</strong> Study of the competition field, selection of Lego components, 
+                        3D modeling, and prototype testing (50+ hours of building)
+                    <br>
+                    - <strong>Programming:</strong> Code development with <strong>EV3 Classroom</strong> 
+                        (block-based language <em>similar to MIT's Scratch</em>) for 15 missions 
+                        (movements, color/distance sensors, automatic mechanical arms)
+                    <br>
+                    - <strong>Team management:</strong> Task assignment, conflict resolution, 
+                    weekly sprint planning to meet deadlines
+                    <br>
+                    - <strong>Competition:</strong> Real-time strategy, debugging under pressure, presentation 
+                    of the robotic project to the judges
+                </p>
+
+                <h2 class="section-title">Results and Skills</h2>
+                <p>
+                    <strong>Result:</strong> <strong>1st place interregional</strong> (Emilia-Romagna), 
+                    regional qualification, official FLL Italy recognition.
+                    <br><br>
+                    <strong>Skills developed:</strong>
+                    <br>• Technical leadership and team management under stress
+                    <br>• Robotics programming (Lego Mindstorms EV3)
+                    <br>• Practical problem solving (debugging in 2 minutes)
+                    <br>• Technical communication (presentation to judges)
+                    <br>• Project planning with strict deadlines
+                    <br><br>
+                    <em>Directly transferable to internships/industrial projects</em>
+                </p>
+            </section>
+
+            <aside>
+                <div class="project-images">
+                    <div>
+                        <img src="fll-team.jpg" alt="First Lego League ITS Luigi Einaudi Team">
+                        <div class="image-caption">The team during the First Lego League competition.</div>
+                    </div>
+
+                    <div>
+                        <img src="fll-robot.jpg" alt="Completed Lego Mindstorms robot">
+                        <div class="image-caption">The Lego Mindstorms robot ready for the competition missions.</div>
+                    </div>
+
+                    <div>
+                        </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>
