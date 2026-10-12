@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Stampa 3D e Prototipazione Modellazione CAD - Leonardo Lazzaretti</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+            background: linear-gradient(135deg, #2d7a8f 0%, #32b8c6 35%, #1f2121 100%);
+        }
+
+        .project-page {
+            max-width: 960px;
+            margin: 40px auto 80px;
+            padding: 32px 24px 48px;
+            background: #f9fafb;
+            border-radius: 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: #0f172a;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #e5f3ff;
+        }
+
+        .back-link:hover {
+            color: #1d6078;
+            background: #dbeafe;
+        }
+
+        .project-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .project-subtitle {
+            font-size: 1rem;
+            color: #4b5563;
+            margin-bottom: 32px;
+        }
+
+        .project-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.6fr);
+            gap: 32px;
+            align-items: flex-start;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            margin: 32px 0 10px;
+            color: #111827;
+            font-weight: 700;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #eef2ff;
+            border: 1px solid #e5e7eb;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .project-images {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .project-images img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+        }
+
+        .image-caption {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        .project-page ul {
+            padding-left: 28px;
+            margin-top: 4px;
+            margin-bottom: 16px;
+        }
+
+        .project-page li {
+            margin-bottom: 2px;
+        }
+
+        .project-page p br {
+            display: block;
+            content: '';
+            margin-top: -8px;
+            height: 0;
+        }
+
+        .project-page section p {
+            margin-left: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .project-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<main class="project-page">
+    <a href="index.html#progetti" class="back-link">← Torna ai progetti 🏠</a>
+
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:15px; margin-bottom:10px;">
+        <h1 class="project-title" style="margin:0;">
+            Stampa 3D e Prototipazione
+            <span style="background: #059669; color: white; padding: 4px 8px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; vertical-align: middle; margin-left: 12px;">
+                ✅ Corso completato
+            </span>
+        </h1>
+        <div style="font-size: 3rem; background: #e0f2fe; padding: 8px 16px; border-radius: 12px;">🖨️</div>
+    </div>
+
+    <p class="project-subtitle">
+        Percorso formativo e pratico di modellazione CAD 3D, configurazione avanzata di parametri di slicing 
+        e gestione di materiali polimerici e tecnici per la realizzazione di prototipi funzionali e componenti meccanici.
+    </p>
+
+    <div class="project-layout">
+        <!-- Colonna sinistra: testo -->
+        <section>
+
+            <h2 class="section-title">Descrizione del progetto</h2>
+            <p>
+                <strong>Corso e pratica di Modellazione e Stampa 3D</strong> – percorso di 30 ore incentrato 
+                sulla prototipazione rapida, utilizzo di stampanti 3D, modellazione CAD con Solidworks 
+                e configurazione dei parametri di slicing per ottimizzare resistenza meccanica, finitura superficiale e tempi di stampa.
+            </p>
+
+            <ul>
+                <li>Studio e impostazione dei parametri di slicing (temperatura, retrazione, velocità, riempimento).</li>
+                <li>Gestione di differenti materiali polimerici e tecnici (PLA, ABS, TPU, Wood PLA e filamenti speciali).</li>
+            </ul>
+
+            <p>
+                <strong>Il mio ruolo:</strong> progettazione e realizzazione di prototipi funzionali complessi, 
+                tra cui assiemi meccanici articolati come il giunto cardanico, curando ogni fase dalla modellazione 3D 
+                fino al post-processing e all'assemblaggio dei componenti stampati.
+            </p>
+
+            <h2 class="section-title">Cosa ho fatto</h2>
+            <p>
+                - <strong>Modellazione CAD:</strong> creazione di parti e assiemi meccanici in Solidworks ottimizzati per la stampa 3D (tolleranze di accoppiamento, angoli di sformo e minimizzazione dei supporti).<br>
+                - <strong>Configurazione Slicing:</strong> utilizzo di software di slicing per la generazione dei percorsi utensile, impostazione densità di infill e orientamento dei pezzi sul piano di stampa.<br>
+                - <strong>Gestione Materiali:</strong> calibrazione delle temperature di estrusione e piatto per materiali termoplastici e tecnici.<br>
+                - <strong>Prototipazione e Test:</strong> stampa di componenti meccanici articolati (es. giunto cardanico), verifica degli accoppiamenti cinematici e correzione iterativa dei parametri.
+            </p>
+
+            <h2 class="section-title">Risultati e competenze</h2>
+            <p>
+                <strong>Risultato:</strong> completamento con successo del corso di 30 ore e prototipazione avanzata 
+                di assiemi meccanici funzionanti (giunto cardanico) privi di difetti strutturali.<br><br>
+                <strong>Competenze sviluppate:</strong><br>
+                • Progettazione orientata alla manifattura additiva (DfAM)<br>
+                • Conoscenza approfondita dei parametri di stampa e slicing avanzato<br>
+                • Gestione e trattamento di materiali termoplastici e tecnici<br>
+                • Problem solving su difettologia di stampa (warp, delaminazione, stringing)<br>
+                • Capacità di integrare la prototipazione rapida nei flussi di lavoro ingegneristici
+            </p>
+        </section>
+
+        <!-- Colonna destra: immagini -->
+        <aside>
+            <div class="project-images">
+                <!-- Attestato -->
+                <div>
+                    <img src="attestato-stampa3d.jpg" alt="Attestato corso Modellazione e Stampa 3D">
+                    <div class="image-caption">Attestato del corso di Modellazione e Stampa 3D (30 ore).</div>
+                </div>
+
+                <!-- Foto giunto cardanico stampato in 3D -->
+                <div>
+                    <img src="giunto-cardanico.jpg" alt="Giunto cardanico stampato in 3D">
+                    <div class="image-caption">Progetto realizzato: giunto cardanico stampato in 3D e assemblato.</div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+</body>
+</html>
